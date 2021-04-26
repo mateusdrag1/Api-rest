@@ -1,0 +1,19 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7",
+    "sucrase": "^3.18.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
