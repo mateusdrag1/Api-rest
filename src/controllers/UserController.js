@@ -7,7 +7,7 @@ class UserController {
       const users = await User.findAll({ attributes: ['id', 'nome', 'email'] });
       return res.json(users);
     } catch (err) {
-      return res.status(400).json({ erros: err.errors.map((error) => error.message) });
+      return res.status(400).json({ errors: err.errors.map((error) => error.message) });
     }
   }
 
@@ -18,7 +18,7 @@ class UserController {
       const { id, nome, email } = novoUser;
       return res.json({ id, nome, email });
     } catch (err) {
-      return res.status(400).json({ erros: err.errors.map((error) => error.message) });
+      return res.status(400).json({ errors: err.errors.map((error) => error.message) });
     }
   }
 
@@ -30,7 +30,7 @@ class UserController {
       const { id, nome, email } = user;
       return res.json({ id, nome, email });
     } catch (err) {
-      return res.status(400).json({ erros: err.errors.map((error) => error.message) });
+      return res.status(400).json({ errors: err.errors.map((error) => error.message) });
     }
   }
 
@@ -45,7 +45,7 @@ class UserController {
       const { id, nome, email } = novosDados;
       return res.json({ id, nome, email });
     } catch (err) {
-      return res.status(400).json({ erros: err.errors.map((error) => error.message) });
+      return res.status(400).json({ errors: err.errors.map((error) => error.message) });
     }
   }
 
@@ -59,7 +59,7 @@ class UserController {
       await user.destroy();
       return res.status(200).json({ msg: 'Usuário apagado com sucesso!' });
     } catch (err) {
-      return res.status(400).json({ erros: err.errors.map((error) => error.message) });
+      return res.status(400).json({ errors: err.errors.map((error) => error.message) });
     }
   }
 }
